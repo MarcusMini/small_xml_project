@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <! -- declaration des types -->
+
   <xsd:simpleType name="Nom">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
@@ -18,11 +20,17 @@
   </xsd:simpleType>
 
   <xsd:simpleType name="Contrat">
-    <xsd:restriction base="xsd:string"/>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Apprentissage"></xsd:enumeration>
+      <xsd:enumeration value="Contrat de profesionnalisation"></xsd:enumeration>
+      <xsd:enumeration value="Stage"></xsd:enumeration>
+    </xsd:restriction>
   </xsd:simpleType>
 
   <xsd:simpleType name="Mail">
-    <xsd:restriction base="xsd:string"/>
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"></xsd:maxLength>
+    </xsd:restriction>
   </xsd:simpleType>
 
   <xsd:simpleType name="INE">
@@ -111,4 +119,25 @@
     </xsd:restriction>
     <xsd:attribute name="appreciation" type="xsd:string"/>
   </xsd:simpleType>
+
+
+  <! -- declaration complexe -->
+
+  <xsd:complexType name="apprenti">
+    <xsd:sequenceType>
+      <xsd:element name="nom" type="Nom"></xsd:element>
+      <xsd:element name="prenom" type="Prenom"></xsd:element>
+      <xsd:element name="formation" type="Formation"></xsd:element>
+      <xsd:element name="annee" type="Annee"></xsd:element>
+      <xsd:element name="contrat" type="Contrat"></xsd:element>
+      <xsd:element name="mail" type="Mail"></xsd:element>
+      <xsd:element name="ine" type="INE"></xsd:element>
+
+      <xsd:complexType name="Etablissement">
+        <xsd:element name="nom" type="Etablissement"></xsd:element>
+  
+      </xsd:complexType>
+
+    </xsd:sequenceType>
+  </xsd:complexType>
 </xs:schema>
