@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:simpleType name="Nom">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Prenom">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Formation">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Annee">
+    <xsd:restriction base="xsd:date"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Contrat">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Mail">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="INE">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Etablissement">
+    <xsd:enumeration value="IUT BOBIGNY">
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Profession">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="SIRET">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Adresse">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="Taille">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="MIC"></xsd:enumeration>
+      <xsd:enumeration value="PME"></xsd:enumeration>
+      <xsd:enumeration value="ETI"></xsd:enumeration>
+      <xsd:enumeration value="GE"></xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="secteur">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Agriculture"></xsd:enumeration>
+      <xsd:enumeration value="Armée - sécurité"></xsd:enumeration>
+      <xsd:enumeration value="Art - design"></xsd:enumeration>
+      <xsd:enumeration value="Audit - gestion"></xsd:enumeration>
+      <xsd:enumeration value="Audiovisuel - Spectale"></xsd:enumeration>
+      <xsd:enumeration value="Automobile"></xsd:enumeration>
+      <xsd:enumeration value="Batiment - travaux publics"></xsd:enumeration>
+      <xsd:enumeration value="Chimie - Pharmacie"></xsd:enumeration>
+      <xsd:enumeration value="Culture - Artisanat d'art"></xsd:enumeration>
+      <xsd:enumeration value="Commerce - distribution"></xsd:enumeration>
+      <xsd:enumeration value="Communication - Marketing - Publicite"></xsd:enumeration>
+      <xsd:enumeration value="Aeronautique - Ferroviaire - Navale"></xsd:enumeration>
+      <xsd:enumeration value="Droit Justice"></xsd:enumeration>
+      <xsd:enumeration value="Edition - Journalisme"></xsd:enumeration>
+      <xsd:enumeration value="Electronique"></xsd:enumeration>
+      <xsd:enumeration value="Enseignement"></xsd:enumeration>
+      <xsd:enumeration value="Energie"></xsd:enumeration>
+      <xsd:enumeration value="Environnement"></xsd:enumeration>
+      <xsd:enumeration value="Fonctions publique"></xsd:enumeration>
+      <xsd:enumeration value="Informatique"></xsd:enumeration>
+      <xsd:enumeration value="Maintenance"></xsd:enumeration>
+      <xsd:enumeration value="Santé"></xsd:enumeration>
+      <xsd:enumeration value="Transport"></xsd:enumeration>
+      <xsd:enumeration value="Recherche"></xsd:enumeration>
+      <xsd:enumeration value="Linguistique"></xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+</xs:schema>
