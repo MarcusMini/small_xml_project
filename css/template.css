@@ -1,0 +1,48 @@
+.templateContainer {
+	width: 980px;
+	margin: 0 auto;
+	background-color: #f5f5f5;
+	padding: 25px;
+	border-left: 1px solid silver;
+	border-right: 1px solid silver;
+}
+
+.templateH1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+.templateH2 {
+	font-size: 20px;
+	text-align: center;
+	font-style: italic;
+	font-weight: 100;
+}
+
+.templateH3 {
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+p, li {
+	font-size: 14px;
+	font-family: "Arial";
+}
+
+ul {
+	padding :0;
+}
+
+.tags {
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	background-color: silver;
+	color: dimgray;
+	padding: 5px 10px;
+	list-style: none;
+}
+
+.tags + .tags {
+	margin-left: 15px;
+}

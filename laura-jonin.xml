@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+
+<FicheMemoire titre="Fiche Laura">
+	<Apprenti>
+		<nomApprenti>JONIN</nomApprenti>
+		<prenomApprenti>Laura</prenomApprenti>
+		<formationApprenti>Licence Professionnelle CIWM</formationApprenti>
+		<annee>2016</annee>
+		<contrat>Apprentissage</contrat>
+		<mailApprenti>laura.jonin@gmail.com</mailApprenti>
+		<numINE>2503036006L</numINE>
+		<etablissement>
+			<nomEtablissement>IUT de Bobigny</nomEtablissement>
+			<tuteurEtablissement>
+				<nomTuteur>FIGLARZ</nomTuteur>
+				<prenomTuteur>François</prenomTuteur>
+				<professionTuteur>Enseignant</professionTuteur>
+				<mailTuteur>francois.figlarz@univ-paris13.fr</mailTuteur>
+			</tuteurEtablissement>
+		</etablissement>
+	</Apprenti>
+	<Entreprise>
+		<nomEntreprise>Colorz</nomEntreprise>
+		<siretEntreprise>33847789600058</siretEntreprise>
+		<adresseEntreprise>16 Bis Avenue Parmentier 75011 Paris</adresseEntreprise>
+		<secteur>Web</secteur>
+		<taille>PME</taille>
+		<tuteur>
+			<nomTuteur>SONNENTRUCKER</nomTuteur>
+			<prenomTuteur>Julien</prenomTuteur>
+			<professionTuteur>CTO</professionTuteur>
+			<mailTuteur>julien@colorz.fr</mailTuteur>
+		</tuteur>
+	</Entreprise>
+	<Contenu>
+		<problematique>Quel est l'avenir du métier d'intégrateur web ?</problematique>
+		<missions>
+			<mission>Intégration de page web</mission>
+			<mission>Template de newsletter</mission>
+		</missions>
+		<technologies>
+			<technologie>HTML</technologie>
+			<technologie>CSS</technologie>
+			<technologie>JavaScript</technologie>
+			<technologie>jQuery</technologie>
+			<technologie>Bootstrap</technologie>
+			<technologie>Wordpress</technologie>
+			<technologie>Magento</technologie>
+		</technologies>
+		<outils>
+			<outil>Sublime Text</outil>
+			<outil>Photoshop</outil>
+			<outil>Illustrator</outil>
+		</outils>
+		<motscles>
+			<motscle>Développement</motscle>
+			<motscle>Web</motscle>
+			<motscle>Agence</motscle>
+			<motscle>Numérique</motscle>
+			<motscle>Intégrateur</motscle>
+			<motscle>Front-End</motscle>
+		</motscles>
+		<note appreciation="Parfait">20</note>
+	</Contenu>
+</FicheMemoire>

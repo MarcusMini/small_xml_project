@@ -1,0 +1,155 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+form {
+	width: 960px;
+	margin: 0 auto;
+}
+
+label, input {
+	display: inline-block;
+	vertical-align: middle;
+	height: 25px;
+	line-height: 25px;
+	font-size: 13px;
+}
+
+label {
+	width: 150px;
+}
+
+input {
+	outline: 0;
+}
+
+fieldset {
+	font-size: 0;
+}
+
+.box {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+button {
+	-webkit-appearance: none;
+	background-color: steelblue;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	outline: 0;
+	text-transform: uppercase;
+	padding: 10px 15px;
+}
+
+td{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+tr{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+}
+
+#wraper_app, #input_wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.mdl-textfield{
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+
+.nom{
+	padding-left: 5px;
+}
+
+.demo-layout-transparent {
+  background: url('img/library.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+
+.bar{
+	box-sizing: border-box;
+background: #3F51B5;
+color: white;
+width: 100%;
+padding: 16px;
+}
+
+.container{
+	padding-right: 0px;
+	padding-left: 0px;
+	width: 100vw !important;
+}
+
+.mdl-navigation__link{
+	color: white !important;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
+
+form{
+	padding-top: 50px;
+}
+
+.onblock input{
+	display: block;
+	margin-bottom: 5px;
+}
+
+
+textarea{
+	display: block;
+	width: 100%;
+	height: 100px;
+	outline: none;
+	font-size: 14px !important;
+}
+
+.override{
+	display: block !important;
+}
+
+.override h2{
+	font-size: 30px;
+}
+
+.mdl-textfield__label:after{
+	background-color: transparent !important;
+}
+
+select{
+	font-size: 14px;
+}
