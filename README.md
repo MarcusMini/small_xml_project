@@ -15,7 +15,7 @@ a small xml project....
 ##### Allow user to create, update and browse documents threw this web application
 
 
-# To consult this project online 
+# To consult this project 
 
 Use this URL : http://lapprentissage.com/ProjetXML/
 
