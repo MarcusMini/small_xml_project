@@ -12,5 +12,12 @@ a small xml project....
 
 # Goal of this project 
 
-### Allow user to create, update and browse documents threw this web application
+##### Allow user to create, update and browse documents threw this web application
+
+
+# To consult this project online 
+
+Use this URL : http://lapprentissage.com/ProjetXML/
+
+
 
