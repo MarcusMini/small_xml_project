@@ -7,7 +7,7 @@ body, html {
 }
 
 form {
-	width: 960px;
+	width: 95vw;
 	margin: 0 auto;
 }
 
@@ -21,6 +21,7 @@ label, input {
 
 label {
 	width: 150px;
+	color: white;
 }
 
 input {
@@ -36,6 +37,21 @@ fieldset {
 	vertical-align: top;
 	width: 50%;
 }
+
+.newBox{
+	display: flex;
+	width: 100%;
+}
+
+.newBox .mdl-textfield__input{
+	color: white;
+	border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+.newBox .mdl-textfield__label{
+	color: white;
+}
+
 
 button {
 	-webkit-appearance: none;

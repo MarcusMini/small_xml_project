@@ -5,16 +5,172 @@ include 'include/header.php';
 
    <!-- /.container -->
 
+
+	<form method="GET" action="resultat.php" accept-charset="UTF-8">
+		<div class="demo-card-event mdl-card mdl-shadow--2dp wider">
+			  <div class="mdl-card__title mdl-card--expand">
+			    <h4>Section Apprenti</h4>
+			  </div>
+				<div class="form_wrapper">
+					<div class="form_container">
+						<div class="mdl-card__title mdl-card--expand">
+					    <h4>Information de l'apprenti</h4>
+					  </div>
+						<!-- name -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="sample3" for="nomApprenti">Nom</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="nomApprenti">
+						    <label class="mdl-textfield__label" for="sample3">Dubois</label>
+						  </div>
+	    			</div>
+						<!-- firstname -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="sample3" for="prenomApprenti">Prénom</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="prenomApprenti">
+						    <label class="mdl-textfield__label" for="sample3">Jean-Eude</label>
+						  </div>
+	    			</div>
+						<!-- formation -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="sample3" for="formationApprenti">Formation</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="formationApprenti">
+						    <label class="mdl-textfield__label" for="sample3">CIWM</label>
+						  </div>
+	    			</div>
+						<!-- annee -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="sample3" for="annee">Annee</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="annee">
+						    <label class="mdl-textfield__label" for="sample3">2016</label>
+						  </div>
+	    			</div>
+						<!-- contrat -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="contratApprenti" for="annee">Contrat</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<select name="contratApprenti">
+									<option value="Apprentissage">Apprentissage</option>
+									<option value="Stage alterné">Stage alterné</option>
+									<option value="Professionnalisation">Professionnalisation</option>
+								</select>
+						  </div>
+	    			</div>
+						<!-- Mail -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="sample3" for="mailApprenti">Mail</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="mailApprenti">
+						    <label class="mdl-textfield__label" for="sample3">johndoe@gmail.com</label>
+						  </div>
+	    			</div>
+						<!-- INE -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+						    <label class="mdl-textfield__label" for="sample3" for="ine">INE</label>
+						  </div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="ine">
+						    <label class="mdl-textfield__label" for="sample3">12345678910D</label>
+						  </div>
+	    			</div>
+					</div>
+
+
+					<!-- form about the uni -->
+
+					<div class="form_container">
+						<div class="mdl-card__title mdl-card--expand">
+							<h4>Information sur l'établissement</h4>
+						</div>
+						<!-- uni name -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+								<label class="mdl-textfield__label" for="sample3" for="etabNom">Nom etablissement</label>
+							</div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="sample3" name="etabNom">
+								<label class="mdl-textfield__label" for="sample3">Université Paris 13</label>
+							</div>
+						</div>
+						<!-- tutor name -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+								<label class="mdl-textfield__label" for="sample3" for="tuteurEtabNom">Nom du tuteur</label>
+							</div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="sample3" name="tuteurEtabNom">
+								<label class="mdl-textfield__label" for="sample3">Delacroix</label>
+							</div>
+						</div>
+						<!-- tutor firstname -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+								<label class="mdl-textfield__label" for="sample3" for="tuteurEtabPrenom">Prénom du tuteur</label>
+							</div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="sample3" name="tuteurEtabPrenom">
+								<label class="mdl-textfield__label" for="sample3">Manon</label>
+							</div>
+						</div>
+						<!-- job of the tutor -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+								<label class="mdl-textfield__label" for="sample3" for="tuteurEtabProfession">Profession du tuteur</label>
+							</div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="sample3" name="tuteurEtabProfession">
+								<label class="mdl-textfield__label" for="sample3">Enseignant chercheur</label>
+							</div>
+						</div>
+						<!-- tutor mail -->
+						<div class="newBox">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
+								<label class="mdl-textfield__label" for="contratApprenti" for="tuteurEtabMail">Adresse mail du tuteur</label>
+							</div>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="sample3" name="tuteurEtabMail">
+								<label class="mdl-textfield__label" for="sample3">manondelacroix@mit.edu.com</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</form>
+
 	<form method="GET" action="resultat.php" accept-charset="UTF-8">
     		<fieldset>
-    			<legend>Apprenti</legend>
+    			<!-- <legend>Apprenti</legend>
     			<div class="box">
     				<label for="nomApprenti" >Nom :</label>
-    				<input name="nomApprenti" type="text"/>
+    				 <input name="nomApprenti" type="text"/>
+						<div class="mdl-textfield mdl-js-textfield md-text">
+					    <input class="mdl-textfield__input" type="text" id="sample1" name="nomApprenti">
+					    <label class="mdl-textfield__label" for="sample1">Text...</label>
+					  </div>
     			</div>
     			<div class="box">
     				<label for="prenomApprenti" >Prenom :</label>
     				<input name="prenomApprenti" type="text"  />
+						<div class="mdl-textfield mdl-js-textfield md-text">
+					    <input class="mdl-textfield__input" type="text" id="sample1" name="prenomApprenti">
+					    <label class="mdl-textfield__label" for="sample1">Text...</label>
+					  </div>
     			</div>
     			<div class="box">
     				<label for="formationApprenti" >Formation :</label>
@@ -28,7 +184,7 @@ include 'include/header.php';
 
     			<div class="box">
     				<label for="contratApprenti" >Contrat :</label>
-    				<!-- <input name="contratApprenti" type="text"/> -->
+    				 <input name="contratApprenti" type="text"/>
 						<select name="contratApprenti">
 							<option value="Apprentissage">Apprentissage</option>
 							<option value="Stage alterné">Stage alterné</option>
@@ -58,27 +214,27 @@ include 'include/header.php';
     			<div class="box">
     				<label for="tuteur" >Tuteur :</label>
 
-    			</div>
+    			</div> -->
 
-    			<div class="box">
+    			<!-- <div class="box">
     				<label for="tuteurEtabNom" >Nom :</label>
     				<input name="tuteurEtabNom" type="text"/>
-    			</div>
+    			</div> -->
 
-    			<div class="box">
+    			<!-- <div class="box">
     				<label for="tuteurEtabPrenom" >Prenom :</label>
     				<input name="tuteurEtabPrenom" type="text"/>
-    			</div>
+    			</div> -->
 
-    			<div class="box">
+    			<!-- <div class="box">
     				<label for="tuteurEtabProfession" >Profession :</label>
     				<input name="tuteurEtabProfession" type="text"/>
-    			</div>
+    			</div> -->
 
-    			<div class="box">
+    			<!-- <div class="box">
     				<label for="tuteurEtabMail" >Mail :</label>
     				<input name="tuteurEtabMail" type="text"/>
-    			</div>
+    			</div> -->
     		</fieldset>
 
     		<fieldset>
