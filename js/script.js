@@ -1,5 +1,50 @@
 (function (){
   document.addEventListener('DOMContentLoaded', function(){
+
+    var fileName = location.href.split("/").slice(-1);
+
+    if(fileName[0] == "index.php"){
+      document.getElementById('addFieldMission').addEventListener('click', function(e){
+        e.preventDefault();
+
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]'><label class='mdl-textfield__label' for='mission[]'></label></div>";
+
+
+        document.getElementById('missions').insertAdjacentHTML("beforeend",elementHTML);
+      }, false);
+
+
+      document.getElementById('addFieldTechno').addEventListener('click', function(e){
+        e.preventDefault();
+
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='technologie[]'><label class='mdl-textfield__label' for='technologie[]'></label></div>";
+
+
+        document.getElementById('technology').insertAdjacentHTML("beforeend",elementHTML);
+      }, false);
+
+
+      document.getElementById('addFieldKey').addEventListener('click', function(e){
+        e.preventDefault();
+
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='motcle[]'><label class='mdl-textfield__label' for='motcle[]'></label></div>";
+
+
+        document.getElementById('keyword').insertAdjacentHTML("beforeend",elementHTML);
+      }, false);
+
+
+      document.getElementById('addFieldOutil').addEventListener('click', function(e){
+        e.preventDefault();
+
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='outil[]'><label class='mdl-textfield__label' for='outil[]'></label></div>";
+
+
+        document.getElementById('outils').insertAdjacentHTML("beforeend",elementHTML);
+      }, false);
+    }
+
+
     // init array
     var listData;
 

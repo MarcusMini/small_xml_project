@@ -96,6 +96,7 @@ ul {
 
 .form_container{
 	width: 50vw;
+	margin-bottom: 30px;
 }
 
 .form_wrapper{
@@ -105,4 +106,32 @@ ul {
 .form_container .mdl-card__title{
 	color: white;
 	font-size: 1em;
+}
+
+.bg-blue{
+	background-color: #536DFE !important;
+}
+
+.bg-blue-dark{
+	background-color: #0D47A1 !important;
+}
+
+.space-top{
+	margin-top: 50px;
+}
+
+#addFieldMission, #addFieldTechno, #addFieldOutil, #addFieldKey{
+	margin: 0 auto;
+	display: block;
+}
+
+.ttarea{
+	border-left: 1px solid white !important;
+	border-right: 1px solid white !important;
+}
+
+.centerButton{
+	margin: 30px auto !important;
+	display: block !important;
+	width: 200px !important;
 }
