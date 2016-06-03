@@ -22,7 +22,7 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" for="sample3" for="nomApprenti">Nom</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="text" id="sample3" name="nomApprenti">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="nomApprenti" required="required" maxlength="25">
 						    <label class="mdl-textfield__label" for="sample3">Dubois</label>
 						  </div>
 	    			</div>
@@ -32,7 +32,7 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" for="sample3" for="prenomApprenti">Prénom</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="text" id="sample3" name="prenomApprenti">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="prenomApprenti" required="required" maxlength="25">
 						    <label class="mdl-textfield__label" for="sample3">Jean-Eude</label>
 						  </div>
 	    			</div>
@@ -42,17 +42,17 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" for="sample3" for="formationApprenti">Formation</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="text" id="sample3" name="formationApprenti">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="formationApprenti" required="required" maxlength="30">
 						    <label class="mdl-textfield__label" for="sample3">CIWM</label>
 						  </div>
 	    			</div>
 						<!-- annee -->
 						<div class="newBox">
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label labelField">
-						    <label class="mdl-textfield__label" for="sample3" for="annee">Annee</label>
+						    <label class="mdl-textfield__label" type="text" for="sample3" for="annee">Annee</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="text" id="sample3" name="annee">
+						    <input class="mdl-textfield__input" type="number" id="sample3" name="annee" required="required" maxlength="4">
 						    <label class="mdl-textfield__label" for="sample3">2016</label>
 						  </div>
 	    			</div>
@@ -62,7 +62,7 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" for="contratApprenti" for="annee">Contrat</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<select name="contratApprenti">
+								<select name="contratApprenti" required="required">
 									<option value="Apprentissage">Apprentissage</option>
 									<option value="Stage alterné">Stage alterné</option>
 									<option value="Professionnalisation">Professionnalisation</option>
@@ -75,7 +75,7 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" for="sample3" for="mailApprenti">Mail</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="text" id="sample3" name="mailApprenti">
+						    <input class="mdl-textfield__input" type="email" id="sample3" name="mailApprenti" required="required">
 						    <label class="mdl-textfield__label" for="sample3">johndoe@gmail.com</label>
 						  </div>
 	    			</div>
@@ -85,7 +85,7 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" for="sample3" for="ine">INE</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="text" id="sample3" name="ine">
+						    <input class="mdl-textfield__input" type="text" id="sample3" name="ine" required="required" maxlength="11"> <!-- A vérifier -->
 						    <label class="mdl-textfield__label" for="sample3">12345678910D</label>
 						  </div>
 	    			</div>
@@ -133,7 +133,7 @@ include 'include/header.php';
 								<label class="mdl-textfield__label" for="sample3" for="tuteurEtabProfession">Profession du tuteur</label>
 							</div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<input class="mdl-textfield__input" type="text" id="sample3" name="tuteurEtabProfession">
+								<input class="mdl-textfield__input" type="text" id="sample3" name="tuteurEtabProfession" required="required" maxlength="25">
 								<label class="mdl-textfield__label" for="sample3">Enseignant chercheur</label>
 							</div>
 						</div>
@@ -176,7 +176,7 @@ include 'include/header.php';
 							    <label class="mdl-textfield__label" for="siret">SIRET</label>
 							  </div>
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							    <input class="mdl-textfield__input" type="text" id="sample3" name="siret">
+							    <input class="mdl-textfield__input" type="text" id="sample3" name="siret" required="required" maxlength="20">
 							    <label class="mdl-textfield__label" for="siret">1234556778</label>
 							  </div>
 		    			</div>
@@ -186,7 +186,7 @@ include 'include/header.php';
 							    <label class="mdl-textfield__label" for="adresseEntreprise">Adresse de l'entreprise</label>
 							  </div>
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							    <input class="mdl-textfield__input" type="text" id="sample3" name="adresseEntreprise">
+							    <input class="mdl-textfield__input" type="text" id="sample3" name="adresseEntreprise" required="required" maxlength="30">
 							    <label class="mdl-textfield__label" for="adresseEntreprise">1 rue des roses</label>
 							  </div>
 		    			</div>
@@ -207,7 +207,7 @@ include 'include/header.php';
 							  </div>
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 
-									<select name="taille">
+									<select name="taille" required="required">
 										<option value="TPE">TPE</option>
 										<option value="PME">PME</option>
 										<option value="TGE">TGE</option>
@@ -282,7 +282,7 @@ include 'include/header.php';
 										<label class="mdl-textfield__label" for="problematique">Problématique</label>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text" id="sample3" name="problematique">
+										<input class="mdl-textfield__input" type="text" id="sample3" name="problematique" required="required" maxlength="100">
 										<label class="mdl-textfield__label" for="problematique"></label>
 									</div>
 								</div>
@@ -294,7 +294,7 @@ include 'include/header.php';
 										</div>
 										<div id="missions">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" id="sample3" name="mission[]">
+												<input class="mdl-textfield__input" type="text" id="sample3" name="mission[]" required="required" maxlength="50">
 												<label class="mdl-textfield__label" for="mission[]">Mission</label>
 											</div>
 										</div>
@@ -312,7 +312,7 @@ include 'include/header.php';
 										</div>
 										<div id="technology">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" id="sample3" name="technologie[]">
+												<input class="mdl-textfield__input" type="text" id="sample3" name="technologie[]" required="required" maxlength="50">
 												<label class="mdl-textfield__label" for="technologie[]">HTML</label>
 											</div>
 										</div>
@@ -330,7 +330,7 @@ include 'include/header.php';
 									</div>
 									<div id="outils">
 										<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-											<input class="mdl-textfield__input" type="text" id="sample3" name="outil[]">
+											<input class="mdl-textfield__input" type="text" id="sample3" name="outil[]" required="required" maxlength="50">
 											<label class="mdl-textfield__label" for="outil[]"></label>
 										</div>
 									</div>
@@ -353,7 +353,7 @@ include 'include/header.php';
 										</div>
 										<div id="keyword">
 											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-												<input class="mdl-textfield__input" type="text" id="sample3" name="motcle[]">
+												<input class="mdl-textfield__input" type="text" id="sample3" name="motcle[]" required="required" maxlength="20">
 											</div>
 										</div>
 									</div>
@@ -368,7 +368,7 @@ include 'include/header.php';
 										<label class="mdl-textfield__label" for="note">Note</label>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="number" id="sample3" name="note">
+										<input class="mdl-textfield__input" type="number" id="sample3" name="note" maxlength="2">
 									</div>
 								</div>
 								<!-- appreciation -->
@@ -377,7 +377,7 @@ include 'include/header.php';
 										<label class="mdl-textfield__label" for="appreciation">Appreciation</label>
 									</div>
 									<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<textarea name="appreciation" class="mdl-textfield__input ttarea"></textarea>
+										<textarea name="appreciation" class="mdl-textfield__input ttarea" maxlength="100"></textarea> <!-- Type=text non précisé car textarea ? -->
 									</div>
 								</div>
 							</div>
