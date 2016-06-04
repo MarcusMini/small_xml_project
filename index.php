@@ -52,7 +52,7 @@ include 'include/header.php';
 						    <label class="mdl-textfield__label" type="text" for="sample3" for="annee">Annee</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="number" id="sample3" name="annee" required="required" maxlength="4">
+						    <input class="mdl-textfield__input" type="number" id="sample3" name="annee" required="required" maxlength="4" min="1900" max="3000" value="2016">
 						    <label class="mdl-textfield__label" for="sample3"></label>
 						  </div>
 	    			</div>

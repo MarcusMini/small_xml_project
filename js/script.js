@@ -55,6 +55,12 @@
 
         addList();
       }, false);
+
+
+      var isHere = document.getElementsByClassName('close_but');
+      if(isHere){
+        addList();
+      }
     });
 
 

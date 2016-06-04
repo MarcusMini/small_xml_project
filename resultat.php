@@ -4,7 +4,7 @@ include 'include/header.php';
 
 /////////////// CREATION DU XML
 
-$xml = new DOMDocument('1.0', 'ISO-8859-1');
+$xml = new DOMDocument('1.0', 'UTF-8');
 $xml->formatOutput = true;
 $nom = $_GET['nomApprenti'];
 $prenom = $_GET['prenomApprenti'];
