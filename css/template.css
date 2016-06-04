@@ -123,6 +123,8 @@ ul {
 #addFieldMission, #addFieldTechno, #addFieldOutil, #addFieldKey{
 	margin: 0 auto;
 	display: block;
+	position: relative;
+	left: 45px;
 }
 
 .ttarea{
@@ -134,4 +136,18 @@ ul {
 	margin: 30px auto !important;
 	display: block !important;
 	width: 200px !important;
+}
+
+.material-icons{
+	color: white;
+}
+
+.close_but{
+	right: 0;
+}
+
+
+.mdl-textfield__label{
+	 overflow: inherit !important;
+	white-space: normal !important;
 }

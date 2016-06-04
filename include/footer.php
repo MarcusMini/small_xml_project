@@ -5,7 +5,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vue.min.js"></script>
-    <script src="js/script.js"></script>
     <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </body>
 </html>

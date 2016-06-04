@@ -1,88 +1,91 @@
 (function (){
   document.addEventListener('DOMContentLoaded', function(){
 
-    var fileName = location.href.split("/").slice(-1);
+      var idMissions  = 0;
+      var idTechno = 0;
+      var idTools = 0;
+      var idKeys = 0;
 
-    if(fileName[0] == "index.php"){
       document.getElementById('addFieldMission').addEventListener('click', function(e){
         e.preventDefault();
-
-        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]'><label class='mdl-textfield__label' for='mission[]'></label></div>";
-
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='mission-"+idMissions+"' data-category='missions'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]' required><label class='mdl-textfield__label' for='mission[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
         document.getElementById('missions').insertAdjacentHTML("beforeend",elementHTML);
+
+        idMissions++;
+
+        addList();
       }, false);
 
 
       document.getElementById('addFieldTechno').addEventListener('click', function(e){
         e.preventDefault();
 
-        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='technologie[]'><label class='mdl-textfield__label' for='technologie[]'></label></div>";
-
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='techno-"+idTechno+"' data-category='techno'><input class='mdl-textfield__input' type='text' id='sample3' name='technologie[]' required><label class='mdl-textfield__label' for='technologie[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
         document.getElementById('technology').insertAdjacentHTML("beforeend",elementHTML);
+
+        idTechno++;
+
+          addList();
       }, false);
 
 
       document.getElementById('addFieldKey').addEventListener('click', function(e){
         e.preventDefault();
 
-        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='motcle[]'><label class='mdl-textfield__label' for='motcle[]'></label></div>";
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'  data-category='key' id='keys-"+idKeys+"'><input class='mdl-textfield__input' type='text' id='sample3' name='motcle[]' required><label class='mdl-textfield__label' for='motcle[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
+
+
 
 
         document.getElementById('keyword').insertAdjacentHTML("beforeend",elementHTML);
+        idKeys++;
+        addList();
       }, false);
-
 
       document.getElementById('addFieldOutil').addEventListener('click', function(e){
         e.preventDefault();
 
-        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label'><input class='mdl-textfield__input' type='text' id='sample3' name='outil[]'><label class='mdl-textfield__label' for='outil[]'></label></div>";
-
+        var elementHTML = "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' data-category='tools' id='tools-"+idTools+"'><input class='mdl-textfield__input' type='text' id='sample3' name='outil[]' required><label class='mdl-textfield__label' for='outil[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
         document.getElementById('outils').insertAdjacentHTML("beforeend",elementHTML);
+
+        idTools++;
+
+        addList();
       }, false);
-    }
-
-
-    // init array
-    var listData;
-
-    // AJAX REQUEST
-    var listReq = new XMLHttpRequest();
-    listReq.open('GET','listWorker.php');
-    listReq.send();
-
-    var dataArray = new Array();
-
-    listReq.onreadystatechange = function(readyState, status){
-      if (listReq.readyState == 4) {
-        if (listReq.status == 200) {
-          listData = JSON.parse(listReq.response);
-
-          // PUSH THE DATA INTO DATAARRAY VARIABLE
-          for(var i = 0; i < listData.length; i++){
-            dataArray.push(listData[i]);
-          }
-        } else {
-          console.log('reject');
-        }
-      }
-    };
-
-    // instanciate a new vue
-    // data.nom is a model of the directive v-for
-    new Vue({
-      el: '#app',
-      data: {
-        nom : '',
-        formation : '',
-        link : '',
-        year : '',
-        usr : dataArray
-      }
     });
 
 
-  });
+    function addList(){
+      var el = document.getElementsByClassName('close_but');
+
+      for(var i = 0; i < el.length; i++){
+        el[i].addEventListener('click', function(e){
+          e.preventDefault();
+
+          var attr = this.parentElement.getAttribute('data-category');
+          var elID = this.parentElement.id;
+          var eltorm = document.getElementById(elID);
+
+          console.log(attr);
+
+          console.log(eltorm);
+
+          if(attr == "missions"){
+            document.getElementById('missions').removeChild(eltorm);
+          } else if(attr == "techno"){
+            document.getElementById('technology').removeChild(eltorm);
+          } else if(attr == "tools"){
+            document.getElementById('outils').removeChild(eltorm);
+          } else{
+            document.getElementById('keyword').removeChild(eltorm);
+          }
+
+
+        });
+
+      }
+    }
 })();

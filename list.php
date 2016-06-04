@@ -46,5 +46,6 @@ include 'include/header.php';
 </div>
 <?php
 /*  FIN PAGE     */
+echo "<script src='js/script_view.js'></script>";
 include 'include/footer.php';
 ?>
