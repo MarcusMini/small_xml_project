@@ -5,7 +5,7 @@ include 'include/header.php';
 /////////////// CREATION DU XML
 
 $xml = new DOMDocument('1.0', 'UTF-8');
-$xml->formatOutput = true;
+$xml->formatOutput = false;
 $nom = $_GET['nomApprenti'];
 $prenom = $_GET['prenomApprenti'];
 
@@ -14,8 +14,8 @@ $prenom = $_GET['prenomApprenti'];
 $xslt = $xml->createProcessingInstruction('xml-stylesheet', 'type="text/xsl" href="template.xsl"');
 $xml->appendChild($xslt);
 
-
 // parent
+
 $parentTag = $xml->createElement('FicheMemoire');
 $parentTag->setAttribute("titre","Fiche ".$prenom);
 $parentApp = $xml->appendChild($parentTag);
@@ -236,7 +236,7 @@ foreach($file as $fm){
 
     // write the file as name+firstname.xml
 	 $f = fopen('profil/'.$nomprenom, 'a+');
-   fwrite($f, utf8_encode($xml->saveXML()));
+   fwrite($f, $xml->saveXML());
    $closed = fclose($f);
   if($closed){
 

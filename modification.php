@@ -6,9 +6,7 @@ $xml = simplexml_load_file("profil/".$name);
 
 ?>
 
-
    <!-- /.container -->
-
 
 	<form method="GET" action="resultat.php" accept-charset="UTF-8">
 		<div class="demo-card-event mdl-card mdl-shadow--2dp wider">
@@ -210,7 +208,6 @@ $xml = simplexml_load_file("profil/".$name);
 							    <label class="mdl-textfield__label" for="taille">Taille d'entreprise</label>
 							  </div>
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-
 									<select name="taille" required="required" value="<?php echo $xml->Entreprise->taille ?>">
 										<option value="TPE">TPE</option>
 										<option value="PME">PME</option>
@@ -219,8 +216,6 @@ $xml = simplexml_load_file("profil/".$name);
 							  </div>
 		    			</div>
 						</div>
-
-
 
 						<!-- form about the uni -->
 
@@ -272,9 +267,7 @@ $xml = simplexml_load_file("profil/".$name);
 					</div>
 				</div>
 
-
 				<!-- content -->
-
 
 				<div class="demo-card-event mdl-card mdl-shadow--2dp wider bg-blue-dark space-top">
 						<div class="mdl-card__title mdl-card--expand">
@@ -304,7 +297,7 @@ $xml = simplexml_load_file("profil/".$name);
 												//echo $xml->Contenu->missions;
 												$idMission = 0;
 												foreach($xml->Contenu->missions->mission as $keys){
-													echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='mission-".$idMission."' data-category='missions'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]' required value='".$keys."'><label class='mdl-textfield__label' for='mission[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
+													echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='mission-".$idMission."' data-category='missions'><input class='mdl-textfield__input' type='text' id='sample3' value='".$keys."' name='mission[]' required ><label class='mdl-textfield__label' for='mission[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
 													$idMission++;
 												}
@@ -416,8 +409,6 @@ $xml = simplexml_load_file("profil/".$name);
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centerButton" type="submit">
 					  Envoyer !
 					</button>
-
-
 	</form>
 <?php
 /*  FIN PAGE     */

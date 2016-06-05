@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+<FicheMemoire titre="Fiche Marc">
+  <Apprenti>
+    <nomApprenti>Intha-amnouay</nomApprenti>
+    <prenomApprenti>Marc</prenomApprenti>
+    <formationApprenti>CIWM</formationApprenti>
+    <annee>2016</annee>
+    <contrat>Apprentissage</contrat>
+    <numINE>2406026576D</numINE>
+    <mailApprenti>marc.inthaamnouay@gmail.com</mailApprenti>
+    <etablissement>
+      <nomEtablissement>Paris 13</nomEtablissement>
+      <tuteurEtablissement>
+        <nomTuteur>Djedidi</nomTuteur>
+        <prenomTuteur>Rim</prenomTuteur>
+        <professionTuteur>enseignante chercheuse</professionTuteur>
+        <mailTuteur>rim.jedidi@univ-paris13.fr</mailTuteur>
+      </tuteurEtablissement>
+    </etablissement>
+  </Apprenti>
+  <Entreprise>
+    <nomEntreprise>Southside-interactive</nomEntreprise>
+    <siretEntreprise>80142969700015</siretEntreprise>
+    <adresseEntreprise>51 bis rue de miromesnil</adresseEntreprise>
+    <secteur>Développement</secteur>
+    <taille>TPE</taille>
+    <tuteur>
+      <nomTuteur>Laurio</nomTuteur>
+      <prenomTuteur>Nicolas</prenomTuteur>
+      <professionTuteur>Développeur / Dirigeant</professionTuteur>
+      <mailTuteur>nicolas.laurio@southside-interactive.com</mailTuteur>
+    </tuteur>
+  </Entreprise>
+  <Contenu>
+    <problematique>Quels sont les phases d'évolutions d'une startup ? </problematique>
+    <missions>
+      <mission>Développement de digital index</mission>
+      <mission>Développement de saint gobain</mission>
+      <mission>Développement d'editorium</mission>
+      <mission>Développement d'editorium</mission>
+      <mission>Développement de myrosace</mission>
+    </missions>
+    <technologies>
+      <technologie>HTML</technologie>
+      <technologie>CSS</technologie>
+      <technologie>JavaScript</technologie>
+      <technologie>PHP</technologie>
+      <technologie/>
+    </technologies>
+    <outils>
+      <outil>Atom</outil>
+      <outil>FileZilla</outil>
+      <outil/>
+      <outil/>
+      <outil/>
+    </outils>
+    <motcles>
+      <motcle>web </motcle>
+      <motcle>agency</motcle>
+      <motcle>front-end</motcle>
+      <motcle>back-end</motcle>
+      <motcle/>
+    </motcles>
+    <note appreciation="">20</note>
+  </Contenu>
+</FicheMemoire>
