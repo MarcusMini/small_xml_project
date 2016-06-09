@@ -25,6 +25,8 @@
           // create an array of object
            $assocArray = array("nom" => strval($name), "prenom"  => strval($prenom), "formation" => strval($formation), "link" => $link, "problematique" => strval($pb), "year" => strval($year));
 
+           // push the array into the json array
+
           array_push($memoireArray, $assocArray);
 
       }

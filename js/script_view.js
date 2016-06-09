@@ -13,6 +13,7 @@
 
     listReq.onreadystatechange = function(readyState, status){
       if (listReq.readyState == 4) {
+        // if data received
         if (listReq.status == 200) {
           listData = JSON.parse(listReq.response);
 
@@ -20,6 +21,7 @@
           for(var i = 0; i < listData.length; i++){
             dataArray.push(listData[i]);
           }
+          // if error
         } else {
           console.log('reject');
         }
@@ -28,6 +30,8 @@
 
     // instanciate a new vue
     // data.nom is a model of the directive v-for
+
+
     new Vue({
       el: '#app',
       data: {

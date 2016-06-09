@@ -4,6 +4,7 @@ include 'include/header.php';
 
 ////////// USE MUSTACHE LIKE SYNTAX USING VUE.JS
 ?>
+<!-- Display the list of essay -->
 <div id="app">
   <div id="input_wrapper">
     <!-- by name -->

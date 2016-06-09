@@ -2,11 +2,10 @@
 include 'include/header.php';
 ?>
 
-
    <!-- /.container -->
 
-
 	<form method="GET" action="resultat.php" accept-charset="UTF-8">
+		<!-- section apprenti -->
 		<div class="demo-card-event mdl-card mdl-shadow--2dp wider">
 			  <div class="mdl-card__title mdl-card--expand">
 			    <h4>Section Apprenti</h4>
@@ -151,6 +150,7 @@ include 'include/header.php';
 				</div>
 			</div>
 
+			<!-- section entreprise -->
 			<div class="demo-card-event mdl-card mdl-shadow--2dp wider bg-blue space-top">
 				  <div class="mdl-card__title mdl-card--expand">
 				    <h4>Section Entreprise</h4>
@@ -269,7 +269,7 @@ include 'include/header.php';
 
 				<!-- content -->
 
-
+				<!-- section contenu -->
 				<div class="demo-card-event mdl-card mdl-shadow--2dp wider bg-blue-dark space-top">
 						<div class="mdl-card__title mdl-card--expand">
 							<h4>Contenu</h4>

@@ -320,7 +320,7 @@ $xml = simplexml_load_file("profil/".$name);
 												//echo $xml->Contenu->missions;
 												$idTech = 0;
 												foreach($xml->Contenu->technologies->technologie as $keys){
-													echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='techno-".$idTech."' data-category='techno'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]' required value='".$keys."'><label class='mdl-textfield__label' for='mission[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
+													echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='techno-".$idTech."' data-category='techno'><input class='mdl-textfield__input' type='text' id='sample3' name='technologie[]' required value='".$keys."'><label class='mdl-textfield__label' for='technologie[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
 													$idTech++;
 												}
@@ -343,7 +343,7 @@ $xml = simplexml_load_file("profil/".$name);
 											//echo $xml->Contenu->missions;
 											$idTools = 0;
 											foreach($xml->Contenu->outils->outil as $keys){
-												echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='tools-".$idTools."' data-category='tools'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]' required value='".$keys."'><label class='mdl-textfield__label' for='mission[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
+												echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='tools-".$idTools."' data-category='tools'><input class='mdl-textfield__input' type='text' id='sample3' name='outil[]' required value='".$keys."'><label class='mdl-textfield__label' for='outil[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
 												$idTools++;
 											}
@@ -371,7 +371,7 @@ $xml = simplexml_load_file("profil/".$name);
 												//echo $xml->Contenu->missions;
 												$idKey = 0;
 												foreach($xml->Contenu->motcles->motcle as $keys){
-													echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='keys-".$idKey."' data-category='key'><input class='mdl-textfield__input' type='text' id='sample3' name='mission[]' required value='".$keys."'><label class='mdl-textfield__label' for='mission[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
+													echo "<div class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' id='keys-".$idKey."' data-category='key'><input class='mdl-textfield__input' type='text' id='sample3' name='motcle[]' required value='".$keys."'><label class='mdl-textfield__label' for='motcle[]'></label><button class='mdl-button mdl-js-button mdl-button--icon mdl-button--colored close_but'><i class='material-icons'>close</i></button></div>";
 
 													$idKey++;
 												}

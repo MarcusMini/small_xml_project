@@ -146,8 +146,11 @@ ul {
 	right: 0;
 }
 
-
 .mdl-textfield__label{
 	 overflow: inherit !important;
 	white-space: normal !important;
+}
+
+#app{
+	min-height: 100vh;
 }
