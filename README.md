@@ -11,8 +11,17 @@ This record are save in .xml format using the following pattern
 
 ## Member of this project
 
-##### Marc Intha-amnouay : Lead developer -> made the front-end and the back-end (generation of xml files and the json generator for the front-end)
-##### Hadrien Chevalier : Developer -> made the error handling function and the xsd model
-##### Jonin Laura : Made the XSL stylesheet and the xsd model
-##### Saubaber Anthony : Help us to choose some technologies.. and write docs
-##### Bayrak Ali : Made the header and the footer of this app and the contact page..
+##### Marc Intha-amnouay : Lead developer
+Made the front-end and the back-end (generation of xml files and the json generator for the front-end)
+
+##### Hadrien Chevalier : Developer
+Made the error handling function and the xsd model
+
+##### Jonin Laura : Developer
+Made the XSL stylesheet and the xsd model
+
+##### Saubaber Anthony : Doc guy
+Help us to choose some technologies.. and write docs
+
+##### Bayrak Ali : Developer
+Integrate a part of the header and the footer of this app and the contact page
