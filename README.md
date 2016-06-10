@@ -1,8 +1,9 @@
 # small_xml_project
 
 
-Small xml project is a web app which allow people to create a record of their essay. 
-This record are save in .xml format using the following pattern 
+Small xml project is a web app which asked by the University Paris 13 to the students. This web app allow people to create a record of their essay, edit their record and see their record. 
+
+#### This record are save in .xml format using the following pattern 
 
 ### PATTERN 
 
