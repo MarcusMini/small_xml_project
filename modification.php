@@ -9,7 +9,7 @@ $xml = simplexml_load_file("profil/".$name);
    <!-- /.container -->
 
 	<form method="GET" action="resultat.php" accept-charset="UTF-8">
-		<div class="demo-card-event mdl-card mdl-shadow--2dp wider">
+		<div class="demo-card-event mdl-card mdl-shadow--2dp wider" >
 			  <div class="mdl-card__title mdl-card--expand">
 			    <h4>Section Apprenti</h4>
 			  </div>
@@ -54,7 +54,7 @@ $xml = simplexml_load_file("profil/".$name);
 						    <label class="mdl-textfield__label" type="text" for="sample3" for="annee">Annee</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						    <input class="mdl-textfield__input" type="number" id="sample3" name="annee" required="required" maxlength="4" min="1900" max="3000" value="2016">
+						    <input class="mdl-textfield__input" type="number" id="sample3" name="annee" required="required" maxlength="4" min="1900" max="3000" value="<?php echo $xml->Apprenti->annee ?>">
 						    <label class="mdl-textfield__label" for="sample3"></label>
 						  </div>
 	    			</div>
@@ -64,10 +64,10 @@ $xml = simplexml_load_file("profil/".$name);
 						    <label class="mdl-textfield__label" for="contratApprenti" for="annee">Contrat</label>
 						  </div>
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-								<select name="contratApprenti" required="required" value="<?php echo $xml->Apprenti->contrat ?>">
-									<option value="Apprentissage">Apprentissage</option>
-									<option value="Stage alterné">Stage alterné</option>
-									<option value="Professionnalisation">Professionnalisation</option>
+								<select name="contratApprenti" required="required" value="">
+									<option value="Apprentissage" <?php if($xml->Apprenti->contrat == "Apprentissage"){echo "selected";} ?>>Apprentissage</option>
+									<option value="Stage" <?php if($xml->Apprenti->contrat == "Stage"){echo "selected";} ?>>Stage alterne</option>
+									<option value="Professionnalisation"  <?php if($xml->Apprenti->contrat == "Professionnalisation"){echo "selected";} ?>>Professionnalisation</option>
 								</select>
 						  </div>
 	    			</div>
@@ -209,9 +209,10 @@ $xml = simplexml_load_file("profil/".$name);
 							  </div>
 								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 									<select name="taille" required="required" value="<?php echo $xml->Entreprise->taille ?>">
-										<option value="TPE">TPE</option>
-										<option value="PME">PME</option>
-										<option value="TGE">TGE</option>
+										<option value="TPE" <?php if($xml->Entreprise->taille == "TPE"){echo "selected";} ?>>TPE</option>
+										<option value="PME" <?php if($xml->Entreprise->taille == "PME"){echo "selected";} ?>>PME</option>
+										<option value="GE" <?php if($xml->Entreprise->taille == "GE"){echo "selected";} ?>>GE</option>
+										<option value="TGE" <?php if($xml->Entreprise->taille == "TGE"){echo "selected";} ?>>TGE</option>
 									</select>
 							  </div>
 		    			</div>
@@ -405,8 +406,10 @@ $xml = simplexml_load_file("profil/".$name);
 						</div>
 					</div>
 
+					<input type="hidden" name="oldINE" value="<?php echo $xml->Apprenti->numINE ?>" >
+
 					<!-- Accent-colored raised button with ripple -->
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centerButton" type="submit">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent centerButton" type="submit" name="oldYear" value="<?php echo $xml->Apprenti->annee ?>">
 					  Envoyer !
 					</button>
 	</form>

@@ -1,143 +1,191 @@
-<?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- TYPES SIMPLES -->
+	<xsd:simpleType name="nomPersonneType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="prenomPersonneType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="200"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mailType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+			<xsd:pattern value="[^@]+@[^\.]+\..+"></xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="formationType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="typeContratType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="Apprentissage"></xsd:enumeration>
+			<xsd:enumeration value="Professionalisation"></xsd:enumeration>
+			<xsd:enumeration value="Stage"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="numINEType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="11"/>
+			<xsd:pattern value="\d{10}[A-Z]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="nomEtablissementType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="nomEntrepriseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="professionTuteurType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="siretType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{14}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="adresseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="250"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="secteurEntrepriseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tailleEntrepriseType">
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="TPE"></xsd:enumeration>
+			<xsd:enumeration value="PME"></xsd:enumeration>
+			<xsd:enumeration value="GE"></xsd:enumeration>
+			<xsd:enumeration value="TGE"></xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="problematiqueType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="150"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="missionType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technologieType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="outilType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="motscleType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- /TYPES SIMPLES -->
+	<!-- TYPES COMPLEXES -->
+	<xsd:complexType name="TuteurType">
+		<xsd:sequence>
+			<xsd:element name="nomTuteur" type="nomPersonneType"></xsd:element>
+			<xsd:element name="prenomTuteur" type="prenomPersonneType"></xsd:element>
+			<xsd:element name="professionTuteur" type="professionTuteurType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="mailTuteur" type="mailType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EtablissementType">
+		<xsd:sequence>
+			<xsd:element name="nomEtablissement" type="nomEtablissementType"></xsd:element>
+			<xsd:element name="tuteurEtablissement" type="TuteurType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ApprentiType">
+		<xsd:sequence>
+			<xsd:element name="nomApprenti" type="nomPersonneType"></xsd:element>
+			<xsd:element name="prenomApprenti" type="prenomPersonneType"></xsd:element>
+			<xsd:element name="formationApprenti" type="formationType"></xsd:element>
+			<xsd:element name="annee" type="xsd:gYear"></xsd:element>
+			<xsd:element name="contrat" type="typeContratType"></xsd:element>
+			<xsd:element name="numINE" type="numINEType"></xsd:element>
+			<xsd:element name="mailApprenti" type="mailType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="etablissement" type="EtablissementType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EntrepriseType">
+		<xsd:sequence>
+			<xsd:element name="nomEntreprise" type="nomEntrepriseType"></xsd:element>
+			<xsd:element name="siretEntreprise" type="siretType"></xsd:element>
+			<xsd:element name="adresseEntreprise" type="adresseType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="secteur" type="secteurEntrepriseType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="taille" type="tailleEntrepriseType"></xsd:element>
+			<xsd:element name="tuteur" type="TuteurType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MissionsType">
+		<xsd:sequence>
+			<xsd:element name="mission" type="missionType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TechnologiesType">
+		<xsd:sequence>
+			<xsd:element name="technologie" type="technologieType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OutilsType">
+		<xsd:sequence>
+			<xsd:element name="outil" type="outilType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MotsclesType">
+		<xsd:sequence>
+			<xsd:element name="motcle" type="motscleType" minOccurs="1" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
 
-  <! -- declaration des types -->
+	<xsd:complexType name="NoteType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:integer">
+				<xsd:attribute name="appreciation" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
 
-  <xsd:simpleType name="Nom">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Prenom">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Formation">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Annee">
-    <xsd:restriction base="xsd:date"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Contrat">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Apprentissage"></xsd:enumeration>
-      <xsd:enumeration value="Contrat de profesionnalisation"></xsd:enumeration>
-      <xsd:enumeration value="Stage"></xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Mail">
-    <xsd:restriction base="xsd:string">
-      <xsd:maxLength pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"></xsd:maxLength>
-    </xsd:restriction>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="INE">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Etablissement">
-    <xsd:enumeration value="IUT BOBIGNY">
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Profession">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="SIRET">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Adresse">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Taille">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="MIC"></xsd:enumeration>
-      <xsd:enumeration value="PME"></xsd:enumeration>
-      <xsd:enumeration value="ETI"></xsd:enumeration>
-      <xsd:enumeration value="GE"></xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="secteur">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Agriculture"></xsd:enumeration>
-      <xsd:enumeration value="Armée - sécurité"></xsd:enumeration>
-      <xsd:enumeration value="Art - design"></xsd:enumeration>
-      <xsd:enumeration value="Audit - gestion"></xsd:enumeration>
-      <xsd:enumeration value="Audiovisuel - Spectale"></xsd:enumeration>
-      <xsd:enumeration value="Automobile"></xsd:enumeration>
-      <xsd:enumeration value="Batiment - travaux publics"></xsd:enumeration>
-      <xsd:enumeration value="Chimie - Pharmacie"></xsd:enumeration>
-      <xsd:enumeration value="Culture - Artisanat d'art"></xsd:enumeration>
-      <xsd:enumeration value="Commerce - distribution"></xsd:enumeration>
-      <xsd:enumeration value="Communication - Marketing - Publicite"></xsd:enumeration>
-      <xsd:enumeration value="Aeronautique - Ferroviaire - Navale"></xsd:enumeration>
-      <xsd:enumeration value="Droit Justice"></xsd:enumeration>
-      <xsd:enumeration value="Edition - Journalisme"></xsd:enumeration>
-      <xsd:enumeration value="Electronique"></xsd:enumeration>
-      <xsd:enumeration value="Enseignement"></xsd:enumeration>
-      <xsd:enumeration value="Energie"></xsd:enumeration>
-      <xsd:enumeration value="Environnement"></xsd:enumeration>
-      <xsd:enumeration value="Fonctions publique"></xsd:enumeration>
-      <xsd:enumeration value="Informatique"></xsd:enumeration>
-      <xsd:enumeration value="Maintenance"></xsd:enumeration>
-      <xsd:enumeration value="Santé"></xsd:enumeration>
-      <xsd:enumeration value="Transport"></xsd:enumeration>
-      <xsd:enumeration value="Recherche"></xsd:enumeration>
-      <xsd:enumeration value="Linguistique"></xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Problematique">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Mission">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Technologies">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Outils">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Mots cles">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-
-  <xsd:simpleType name="Note">
-    <xsd:restriction base="xsd:integer">
-      <xs:minInclusive value="0"/>
-      <xs:minInclusive value="20"/>
-    </xsd:restriction>
-    <xsd:attribute name="appreciation" type="xsd:string"/>
-  </xsd:simpleType>
-
-
-  <! -- declaration complexe -->
-
-  <xsd:complexType name="apprenti">
-    <xsd:sequenceType>
-      <xsd:element name="nom" type="Nom"></xsd:element>
-      <xsd:element name="prenom" type="Prenom"></xsd:element>
-      <xsd:element name="formation" type="Formation"></xsd:element>
-      <xsd:element name="annee" type="Annee"></xsd:element>
-      <xsd:element name="contrat" type="Contrat"></xsd:element>
-      <xsd:element name="mail" type="Mail"></xsd:element>
-      <xsd:element name="ine" type="INE"></xsd:element>
-
-      <xsd:complexType name="Etablissement">
-        <xsd:element name="nom" type="Etablissement"></xsd:element>
-  
-      </xsd:complexType>
-
-    </xsd:sequenceType>
-  </xsd:complexType>
-</xs:schema>
+	<xsd:complexType name="ContenuType">
+		<xsd:sequence>
+			<xsd:element name="problematique" type="problematiqueType"></xsd:element>
+			<xsd:element name="missions" type="MissionsType"></xsd:element>
+			<xsd:element name="technologies" type="TechnologiesType"></xsd:element>
+			<xsd:element name="outils" type="OutilsType"></xsd:element>
+			<xsd:element name="motcles" type="MotsclesType"></xsd:element>
+			<xsd:element name="note" type="NoteType"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- /TYPES COMPLEXES -->
+	<!-- DEFINITION NOEUD PRINCIPAL -->
+	<xsd:element name="FicheMemoire">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Apprenti" type="ApprentiType"></xsd:element>
+				<xsd:element name="Entreprise" type="EntrepriseType"></xsd:element>
+				<xsd:element name="Contenu" type="ContenuType"></xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="titre" type="xsd:string"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- /DEFINITION NOEUD PRINCIPAL -->
+</xsd:schema>

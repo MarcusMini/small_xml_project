@@ -63,7 +63,7 @@ include 'include/header.php';
 							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 								<select name="contratApprenti" required="required">
 									<option value="Apprentissage">Apprentissage</option>
-									<option value="Stage alterné">Stage alterné</option>
+									<option value="Stage">Stage alterne</option>
 									<option value="Professionnalisation">Professionnalisation</option>
 								</select>
 						  </div>
@@ -210,6 +210,7 @@ include 'include/header.php';
 									<select name="taille" required="required">
 										<option value="TPE">TPE</option>
 										<option value="PME">PME</option>
+										<option value="PME">GE</option>
 										<option value="TGE">TGE</option>
 									</select>
 							  </div>

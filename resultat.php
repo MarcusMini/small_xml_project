@@ -1,6 +1,37 @@
 ﻿<?php
 include 'include/header.php';
 
+function libxml_display_error($error)
+{
+    $return = "<br/>";
+    switch ($error->level) {
+        case LIBXML_ERR_WARNING:
+            $return .= "<b>Warning $error->code</b>: ";
+            break;
+        case LIBXML_ERR_ERROR:
+            $return .= "<b>Error $error->code</b>: ";
+            break;
+        case LIBXML_ERR_FATAL:
+            $return .= "<b>Fatal Error $error->code</b>: ";
+            break;
+    }
+    $return .= trim($error->message);
+
+    return $return;
+}
+
+function libxml_display_errors() {
+    $errors = libxml_get_errors();
+    echo "<div class='alert alert-danger' role='alert'>";
+    foreach ($errors as $error) {
+        print libxml_display_error($error);
+    }
+    echo "</div>";
+    libxml_clear_errors();
+}
+
+// Enable user error handling
+libxml_use_internal_errors(true);
 
 /////////////// CREATION DU XML
 
@@ -8,6 +39,33 @@ $xml = new DOMDocument('1.0', 'UTF-8');
 $xml->formatOutput = false;
 $nom = $_GET['nomApprenti'];
 $prenom = $_GET['prenomApprenti'];
+
+// get ine
+$ine_save = $_GET['ine'];
+$annee = $_GET['annee'];
+
+
+// get year
+
+
+// if this conditions is true the code will  remove the old file.
+if(isset($_GET['oldYear'])){
+
+  $annee_save = $_GET['oldYear'];
+}
+else{
+  $annee_save = $_GET['annee'];
+
+}
+
+// if this conditions is true the code will  remove the old file.
+if(isset($_GET['oldINE'])){
+  $old_ine = $_GET['oldINE'];
+} else{
+  $old_ine = $_GET['ine'];
+}
+
+
 
 ////////////// IMPLEMENTATION DU XSL
 
@@ -229,23 +287,26 @@ $nomprenom =  "{$nom}{$prenom}".'.xml';
 $file = scandir("profil");
 foreach($file as $fm){
       // if exist remove the file
-     if($fm == $nomprenom){
-       unlink('profil/'.$nomprenom);
+//      echo $ine_save."_".$annee_save.'<br>';
+     if($fm == $old_ine."_".$annee_save.".xml"){
+       unlink('profil/'.$old_ine."_".$annee_save.".xml");
      }
 }
 
     // write the file as name+firstname.xml
-	 $f = fopen('profil/'.$nomprenom, 'a+');
-   fwrite($f, $xml->saveXML());
-   $closed = fclose($f);
-  if($closed){
-
+  if ($xml->schemaValidate('schema.xsd')) {
+    //echo $ine_save."_".$annee.'<br>';
+    $f = fopen('profil/'.$ine_save."_".$annee.".xml", 'a+');
+    fwrite($f, $xml->saveXML());
+    $closed = fclose($f);
+    if($closed){
     // show a notification so the user is aware that his file is create
+    echo '<div class="alert alert-success" role="alert">Fichier généré avec succes !</div>';
+    }
+  }else{
+    echo '<div class="alert alert-danger" role="alert">ERREUR: Les données ne sont pas conformes. Le fichier n\'a pas été généré.</div>';
+    libxml_display_errors();
+  }
+  include 'include/footer.php';
 
-
-?>
-	<div class="alert alert-success" role="alert">Fichier généré avec succes !</div>
-<?php
-}
-include 'include/footer.php';
 ?>

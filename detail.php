@@ -2,6 +2,9 @@
 include 'include/header.php';
 /*  DEBUT PAGE  */
 
+
+/* ------------------------- THIS PAGE DISPLAY THE XSL ----------------------------- */
+
 /* COMPILE XML/XSL */
 $xh = new XSLTProcessor();
 $xml = new DOMDocument();
